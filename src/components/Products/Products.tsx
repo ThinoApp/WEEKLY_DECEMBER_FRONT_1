@@ -84,7 +84,9 @@ const Products = () => {
                         <ul className="menu-item-liste">
                             {item.listes.map((menu, index) => (
                                 <li>
-                                    <img src={`/assets/images/icons/${menu.title.toLocaleLowerCase()}.png`} />
+                                    <img
+                                        src={`/WEEKLY_DECEMBER_FRONT_1/assets/images/icons/${menu.title.toLocaleLowerCase()}.png`}
+                                    />
                                     <div className="menu-item-liste-content">
                                         <h3>{menu.title}</h3>
                                         <p>{menu.text}</p>

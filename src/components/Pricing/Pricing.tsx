@@ -11,7 +11,7 @@ const Pricing = () => {
             <div className="Pricing-content">
                 <div className="Starter">
                     <h3>
-                        <img src="/assets/images/starter.png" />
+                        <img src="/WEEKLY_DECEMBER_FRONT_1/assets/images/starter.png" />
                         Starter
                     </h3>
                     <div className="liste">
@@ -67,7 +67,7 @@ const Pricing = () => {
                 </div>
                 <div className="Professional">
                     <h3>
-                        <img src="/assets/images/professional.png" />
+                        <img src="/WEEKLY_DECEMBER_FRONT_1/assets/images/professional.png" />
                         Professional
                     </h3>
 

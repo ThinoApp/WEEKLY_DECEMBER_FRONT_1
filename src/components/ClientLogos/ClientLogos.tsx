@@ -10,7 +10,7 @@ const ClientLogos = () => {
             <div className="ClientLogos-content">
                 {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13].map((item) => (
                     <div className={`logo-container ${item > 10 ? 'endRow' : ''}`}>
-                        <img src={`/assets/images/clientLogos/Logo_${item}.png`} alt="icons" />
+                        <img src={`/WEEKLY_DECEMBER_FRONT_1/assets/images/clientLogos/Logo_${item}.png`} alt="icons" />
                     </div>
                 ))}
             </div>

@@ -2,7 +2,7 @@ import './CoreFeatures.scss';
 const CoreFeatures = () => {
     return (
         <div className="CoreFeatures">
-            <img src="/assets/images/CoreFeaturesImg.png" alt="core features image" />
+            <img src="/WEEKLY_DECEMBER_FRONT_1/assets/images/CoreFeaturesImg.png" alt="core features image" />
             <div className="CoreFeatures-content">
                 <h2>Allocate Leads and Simplify Lead Management</h2>
                 <p className="CoreFeatures-content-subtitle">

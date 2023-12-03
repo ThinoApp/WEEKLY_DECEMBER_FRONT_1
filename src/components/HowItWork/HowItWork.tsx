@@ -49,14 +49,14 @@ const HowItWork = () => {
                 </p>
                 <div className="HowItWork-right-btn">
                     <button>
-                        <img src="/assets/images/iphone.png" />
+                        <img src="/WEEKLY_DECEMBER_FRONT_1/assets/images/iphone.png" />
                         <div>
                             <p>Download On The</p>
                             <h4>App Store</h4>
                         </div>
                     </button>
                     <button>
-                        <img src="/assets/images/playstore.png" />
+                        <img src="/WEEKLY_DECEMBER_FRONT_1/assets/images/playstore.png" />
                         <div>
                             <p>Get It On</p>
                             <h4>Google Play</h4>

@@ -33,7 +33,7 @@ const WhyChooseUs = () => {
                 </ul>
                 <button>Get Started</button>
             </div>
-            <img src="/assets/images/imageWhyChooseUs.png" alt="why choose us" />
+            <img src="/WEEKLY_DECEMBER_FRONT_1/assets/images/imageWhyChooseUs.png" alt="why choose us" />
         </div>
     );
 };

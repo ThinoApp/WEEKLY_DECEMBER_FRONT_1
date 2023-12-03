@@ -17,7 +17,11 @@ const Heading = () => {
                     <button className="Heading-btn-simple">How It Work</button>
                 </div>
                 <hr />
-                <img src="/assets/images/Five Star.png" alt="five star" className="Heading-star" />
+                <img
+                    src="/WEEKLY_DECEMBER_FRONT_1/assets/images/Five Star.png"
+                    alt="five star"
+                    className="Heading-star"
+                />
                 <hr />
             </div>
         </div>

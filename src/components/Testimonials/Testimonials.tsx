@@ -12,9 +12,9 @@ const Testimonials = () => {
                     <FiChevronRight className="icon" size={24} />
                 </div>
             </div>
-            <img src="/assets/images/Pattern.png" alt="pattern" />
+            <img src="/WEEKLY_DECEMBER_FRONT_1/assets/images/Pattern.png" alt="pattern" />
             <div className="Testimonials-info">
-                <img src="/assets/images/Phtoo.png" alt="profil" />
+                <img src="/WEEKLY_DECEMBER_FRONT_1/assets/images/Phtoo.png" alt="profil" />
                 <h2>
                     <span>"</span>Adam Chen
                 </h2>

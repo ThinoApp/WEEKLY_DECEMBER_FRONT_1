@@ -3,7 +3,7 @@ const Header = () => {
     return (
         <div className="Header">
             <div className="Header-logo">
-                <img src="/assets/images/Logo.png" alt="logo" />
+                <img src="/WEEKLY_DECEMBER_FRONT_1/assets/images/Logo.png" alt="logo" />
                 <h2>PrimeCRM</h2>
             </div>
             <ul className="Header-menu">

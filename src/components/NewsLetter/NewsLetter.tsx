@@ -17,7 +17,7 @@ const NewsLetter = () => {
                     </div>
                 </div>
             </div>
-            <img src="/assets/images/NewsLetter.png" alt="news letter image" />
+            <img src="/WEEKLY_DECEMBER_FRONT_1/assets/images/NewsLetter.png" alt="news letter image" />
         </div>
     );
 };
