@@ -1,0 +1,84 @@
+@use '/src/assets/global';
+.Products {
+    @include global.paddingInline;
+    @apply w-full h-screen flex flex-col items-center mt-12;
+    h2 {
+        font-family: Jost;
+        font-size: 30px;
+        font-weight: 500;
+        line-height: 40px;
+        letter-spacing: 0em;
+        text-align: center;
+    }
+    & > p {
+        font-family: Open Sans;
+        font-size: 15px;
+        font-weight: 400;
+        line-height: 24px;
+        letter-spacing: 0em;
+        text-align: center;
+        width: 50vw;
+        text-transform: capitalize;
+    }
+    &-content {
+        @apply flex justify-around rounded-xl mt-8 h-4/5;
+        padding: 10px;
+        overflow: hidden;
+        width: 100%;
+        border: 3px dotted #dbdbdb;
+        background: linear-gradient(#f9f9f9, #f9f9f9) content-box;
+        .menu-item {
+            flex: 1;
+            overflow: hidden;
+            padding-top: 2rem;
+            button {
+                @apply flex items-center justify-center;
+                width: 130px;
+                height: 40px;
+                padding: 4px 19px;
+                border-radius: 5px;
+                gap: 10px;
+
+                font-family: Jost;
+                font-size: 16px;
+                font-weight: 600;
+                line-height: 25px;
+                letter-spacing: 0em;
+                text-align: left;
+                &.menus-item-title {
+                    @apply bg-primary03 text-white;
+                }
+            }
+            .menu-item-liste {
+                @apply flex flex-col gap-8 mt-8;
+                li {
+                    @apply flex items-center gap-4;
+                    color: #4e4e4e;
+
+                    img {
+                        width: 46px;
+                    }
+                    .menu-item-liste-content {
+                        @apply flex flex-col justify-center;
+                        h3 {
+                            font-family: Jost;
+                            font-size: 16px;
+                            font-weight: 500;
+                            letter-spacing: 0em;
+                            text-align: left;
+                        }
+                        p {
+                            @apply w-2/3;
+                            font-family: Open Sans;
+                            font-size: 13px;
+                            font-weight: 400;
+                            letter-spacing: 0em;
+                            text-align: left;
+                            color: #4e4e4e;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

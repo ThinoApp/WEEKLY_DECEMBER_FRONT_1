@@ -1,0 +1,65 @@
+@use '/src/assets/global';
+
+.NewsLetter {
+    @include global.paddingInline;
+    @apply w-full h-[120vh] mt-32 relative;
+    &-main {
+        @apply rounded-3xl overflow-hidden h-[89vh] flex items-start justify-between p-16;
+        background-image: url('/assets/images/bgNewsLetter.png');
+        background-size: cover;
+        color: white;
+        h3 {
+            font-family: Jost;
+            font-size: 30px;
+            font-weight: 500;
+            line-height: 40px;
+            letter-spacing: 0em;
+            text-align: left;
+        }
+        p,
+        label {
+            @apply text-white;
+            font-family: Open Sans;
+            font-size: 15px;
+            font-weight: 400;
+            line-height: 24px;
+            letter-spacing: 0em;
+            text-align: left;
+        }
+        .right {
+            width: 45%;
+            @apply flex flex-col gap-2;
+            div {
+                @apply flex items-center h-10 gap-2;
+                input {
+                    @apply h-full p-4 rounded-sm;
+                    flex: 0.7;
+                    font-family: Jost;
+                    font-size: 16px;
+                    font-weight: 400;
+                    line-height: 32px;
+                    letter-spacing: 0em;
+                    text-align: left;
+                    outline: none;
+                    color: #939393;
+                }
+                button {
+                    @apply h-full rounded-sm text-primary03;
+                    flex: 0.3;
+                    background: #4be3eb;
+                    font-family: Jost;
+                    font-size: 16px;
+                    font-weight: 600;
+                    line-height: 32px;
+                    letter-spacing: 0em;
+                    text-align: center;
+                }
+            }
+        }
+    }
+
+    & > img {
+        @apply rounded-3xl absolute left-1/2 -translate-x-1/2 w-2/3 top-1/3 -translate-y-[15%];
+        box-shadow: 10px 48px 105px 0px rgba(#ebebeb, 0.8);
+    }
+}

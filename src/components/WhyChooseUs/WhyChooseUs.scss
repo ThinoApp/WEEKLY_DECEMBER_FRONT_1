@@ -1,0 +1,96 @@
+@use '/src/assets/global';
+
+.WhyChooseUs {
+    @include global.paddingInline;
+    @apply flex items-start  justify-between gap-8 w-screen h-screen  relative pt-20 mt-28;
+
+    &::before {
+        @apply w-full h-full absolute left-0 top-0 -scale-x-100;
+        content: '';
+        display: block;
+        background-image: url('/assets/images/bgCoreFeature.png');
+        background-repeat: no-repeat;
+        background-size: 40% 100%;
+        z-index: -1;
+    }
+
+    & > img {
+        @apply object-cover;
+        width: 45%;
+    }
+
+    &-content {
+        @apply w-1/2 flex flex-col items-start gap-4;
+        h2 {
+            @apply w-full;
+
+            font-family: Jost;
+            font-size: 30px;
+            font-weight: 600;
+            line-height: 40px;
+            letter-spacing: 0em;
+            text-align: left;
+        }
+        &-subtitle {
+            @apply text-secondary02;
+            font-family: Open Sans;
+            font-size: 15px;
+            font-weight: 400;
+            line-height: 24px;
+            letter-spacing: 0em;
+            text-align: left;
+        }
+
+        &-list {
+            @apply flex items-start gap-4 w-full mt-4;
+            li {
+                &:nth-child(2) {
+                    img {
+                        @apply w-1/6;
+                    }
+                }
+                @apply flex flex-col items-start h-[110px] justify-between;
+                flex: 1;
+                img {
+                    @apply w-[27%] object-cover;
+                }
+                h3 {
+                    font-family: Jost;
+                    font-size: 20px;
+                    font-weight: 500;
+                    // line-height: 14px;
+                    letter-spacing: 0em;
+                    text-align: left;
+                    flex: 1;
+                }
+                p {
+                    flex: 1;
+
+                    @apply w-[26ch] text-secondary02;
+                    font-family: Open Sans;
+                    font-size: 15px;
+                    font-weight: 400;
+                    // line-height: 24px;
+                    letter-spacing: 0em;
+                    text-align: left;
+                }
+            }
+        }
+        button {
+            @apply flex items-center justify-center bg-primary03 text-white mt-4;
+
+            width: 150px;
+            height: 45px;
+            padding: 7px, 39px, 7px, 39px;
+            border-radius: 5px;
+            gap: 10px;
+
+            font-family: Jost;
+            font-size: 16px;
+            font-weight: 600;
+            line-height: 25px;
+            letter-spacing: 0em;
+            text-align: left;
+        }
+    }
+}

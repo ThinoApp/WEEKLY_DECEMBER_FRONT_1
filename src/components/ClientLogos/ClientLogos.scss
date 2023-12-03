@@ -1,0 +1,49 @@
+@use '/src/assets/global';
+.ClientLogos {
+    @include global.paddingInline;
+
+    @apply flex flex-col items-center gap-4;
+    &-title {
+        @apply w-full;
+        font-family: Jost;
+        font-size: 30px;
+        font-weight: 600;
+        line-height: 40px;
+        letter-spacing: 0em;
+        text-align: center;
+    }
+    &-subtitle {
+        @apply text-secondary02 w-1/2;
+        font-family: Open Sans;
+        font-size: 15px;
+        font-weight: 400;
+        line-height: 24px;
+        letter-spacing: 0em;
+        text-align: center;
+    }
+    &-content {
+        @apply flex  flex-wrap justify-center;
+        .logo-container {
+            @apply flex items-center justify-center;
+            width: 180px;
+            border: 1px solid #c5c5c5;
+            border-top: none;
+            border-left: none;
+            &.endRow {
+                border-bottom: none;
+            }
+            &:nth-child(5n) {
+                border-right: none;
+            }
+            &:nth-last-child(1) {
+                border-right: none;
+            }
+            img {
+                padding: 1rem;
+                max-width: 120px;
+                max-height: 70px;
+                object-fit: cover;
+            }
+        }
+    }
+}

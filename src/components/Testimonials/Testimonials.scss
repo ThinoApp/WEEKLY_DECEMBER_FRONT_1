@@ -1,0 +1,99 @@
+@use '/src/assets/global';
+.Testimonials {
+    @include global.paddingInline;
+    @apply w-full h-[80vh] bg-primary03  flex flex-col items-center relative;
+    img[alt='pattern'] {
+        @apply object-cover w-4/5 absolute left-1/2 -translate-x-1/2;
+    }
+    .Testimonials-arrow-btn {
+        @apply w-full px-[12vw] flex items-center justify-between absolute top-1/2  -translate-y-1/2;
+        .left,
+        .right {
+            opacity: 1;
+            @apply relative;
+
+            &::before {
+                display: block;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                border-radius: 50%;
+                transform: translate(-50%, -50%);
+                content: '';
+                width: 40px;
+                height: 40px;
+                background: #454545;
+            }
+            @apply rounded-full flex items-center justify-center p-1;
+
+            width: 60px;
+            height: 60px;
+            background:
+                linear-gradient(#303030, #303030) padding-box,
+                linear-gradient(to left, transparent 10%, transparent 15%, #e0e0e0 30%, #e0e0e0) border-box;
+            border: 1px solid transparent;
+            .icon {
+                color: white;
+                z-index: 1;
+            }
+        }
+        .right {
+            background:
+                linear-gradient(#303030, #303030) padding-box,
+                linear-gradient(to right, transparent 10%, transparent 15%, #e0e0e0 30%, #e0e0e0) border-box;
+        }
+    }
+    .Testimonials-info {
+        @apply flex flex-col items-center relative z-10 my-auto;
+        img[alt='profil'] {
+            @apply w-24 h-24 rounded-full;
+        }
+        h2 {
+            @apply text-white;
+            font-family: Jost;
+            font-size: 24px;
+            font-weight: 600;
+            letter-spacing: 0em;
+            text-align: left;
+            span {
+                @apply inline-block relative -translate-y-2 text-5xl;
+            }
+        }
+        p {
+            font-family: Open Sans;
+            font-size: 14px;
+            font-weight: 400;
+
+            letter-spacing: 0em;
+            text-align: center;
+            color: white;
+            &:nth-of-type(2) {
+                width: 30vw;
+                line-height: 21px;
+                font-size: 13px;
+                span {
+                    color: #47cfff;
+                }
+            }
+        }
+
+        .rating-container {
+            @apply flex items-center mt-2;
+        }
+    }
+    .Testimonials-bottom {
+        @apply w-full flex items-center justify-around mb-auto;
+        p {
+            color: white;
+            text-align: center;
+        }
+        h4 {
+            font-family: Jost;
+            font-size: 26px;
+            font-weight: 500;
+            letter-spacing: 0em;
+            text-align: center;
+            color: white;
+        }
+    }
+}

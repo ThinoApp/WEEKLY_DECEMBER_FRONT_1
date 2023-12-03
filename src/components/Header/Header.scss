@@ -1,0 +1,40 @@
+.Header {
+    @apply flex items-center justify-between;
+}
+
+.Header-logo {
+    @apply flex items-center gap-2;
+    img {
+        width: 30px;
+        height: 30px;
+    }
+    h2 {
+        font-family: 'Jost';
+        font-size: 26px;
+        font-weight: 700;
+        line-height: 52px;
+        letter-spacing: 0em;
+        text-align: left;
+    }
+}
+
+.Header-menu {
+    @apply flex items-center gap-8;
+    li {
+        font-family: Jost;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 32px;
+        letter-spacing: 0em;
+        text-align: left;
+        cursor: pointer;
+        & button {
+            @apply text-white bg-primary03 flex items-center justify-center;
+            width: 100px;
+            height: 50px;
+            padding: 12px, 25px, 12px, 25px;
+            border-radius: 5px;
+            gap: 10px;
+        }
+    }
+}

@@ -1,0 +1,74 @@
+@use '/src/assets/global';
+.CoreFeatures {
+    @include global.paddingInline;
+    @apply flex items-start  justify-between gap-8 w-screen h-screen  pt-20 mt-28;
+    background-image: url('/assets/images/bgCoreFeature.png');
+    background-repeat: no-repeat;
+    background-size: 40% 100%;
+    & > img {
+        @apply object-cover;
+        width: 45%;
+    }
+    &-content {
+        @apply w-1/2 flex flex-col items-start gap-4;
+        h2 {
+            @apply w-full;
+
+            font-family: Jost;
+            font-size: 30px;
+            font-weight: 600;
+            line-height: 40px;
+            letter-spacing: 0em;
+            text-align: left;
+        }
+        &-subtitle {
+            @apply text-secondary02;
+            font-family: Open Sans;
+            font-size: 15px;
+            font-weight: 400;
+            line-height: 24px;
+            letter-spacing: 0em;
+            text-align: left;
+        }
+        &-list {
+            @apply flex flex-col items-start gap-4;
+            li {
+                @apply flex items-start gap-2 p-4;
+                background:
+                    linear-gradient(white, white) padding-box,
+                    linear-gradient(to right, transparent, #e0e0e0) border-box;
+                border: 1px solid transparent;
+                border-radius: 1.5rem;
+                &::before {
+                    @apply rounded-full;
+                    display: block;
+                    content: '';
+                    width: 15px;
+                    height: 15px;
+                    background-color: #1eb1e5;
+                }
+                & > div {
+                    @apply w-fit;
+                    h3 {
+                        margin-bottom: 0.5rem;
+                        font-family: Jost;
+                        font-size: 20px;
+                        font-weight: 500;
+                        line-height: 14px;
+                        letter-spacing: 0em;
+                        text-align: left;
+                    }
+                    p {
+                        @apply text-secondary02;
+                        font-family: Open Sans;
+                        font-size: 15px;
+                        font-weight: 400;
+                        line-height: 24px;
+                        letter-spacing: 0em;
+                        text-align: left;
+                    }
+                }
+            }
+        }
+    }
+}
