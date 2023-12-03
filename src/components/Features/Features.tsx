@@ -3,19 +3,19 @@ import './Features.scss';
 const subContent = [
     {
         id: 1,
-        icon: '/assets/images/icons/01.png',
+        icon: '/WEEKLY_DECEMBER_FRONT_1/assets/images/icons/01.png',
         title: 'Powerful Settings',
         text: 'Provide excellent customer service.Answer more tickets.',
     },
     {
         id: 2,
-        icon: '/assets/images/icons/02.png',
+        icon: '/WEEKLY_DECEMBER_FRONT_1/assets/images/icons/02.png',
         title: 'User Friendly',
         text: 'Use Timeline to plan projects right how the pieces fit together.',
     },
     {
         id: 3,
-        icon: '/assets/images/icons/03.png',
+        icon: '/WEEKLY_DECEMBER_FRONT_1/assets/images/icons/03.png',
         title: 'Integrated platform',
         text: 'Vivamus massa eleifend etiam neque odio feugiat dolor est.',
     },

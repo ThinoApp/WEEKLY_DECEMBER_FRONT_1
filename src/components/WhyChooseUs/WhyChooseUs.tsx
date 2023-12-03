@@ -2,13 +2,13 @@ import './WhyChooseUs.scss';
 const menuList = [
     {
         id: 1,
-        icon: '/assets/images/icons/whychoose-2.png',
+        icon: '/WEEKLY_DECEMBER_FRONT_1/assets/images/icons/whychoose-2.png',
         title: 'CRM Security',
         subTitle: 'cards and make more sales while chatting',
     },
     {
         id: 2,
-        icon: '/assets/images/icons/whychoose-1.png',
+        icon: '/WEEKLY_DECEMBER_FRONT_1/assets/images/icons/whychoose-1.png',
         title: 'Marketing Hub',
         subTitle: 'Show off your goods in elegant product cards and mak.',
     },
