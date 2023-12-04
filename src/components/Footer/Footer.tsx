@@ -1,6 +1,6 @@
 import { FiChevronUp } from 'react-icons/fi';
 import './Footer.scss';
-
+import { motion } from 'framer-motion';
 const TopFooter = () => {
     return (
         <div className="Footer-top">
@@ -84,11 +84,19 @@ const Copyright = () => {
 };
 const Footer = () => {
     return (
-        <div className="Footer">
+        <motion.div
+            initial={{ x: -100, y: 100, opacity: 0 }}
+            whileInView={{ x: 0, y: 0, opacity: 1 }}
+            transition={{
+                delay: 0.3,
+                type: 'tween',
+            }}
+            className="Footer"
+        >
             <TopFooter />
             <MiddleFooter />
             <Copyright />
-        </div>
+        </motion.div>
     );
 };
 export default Footer;

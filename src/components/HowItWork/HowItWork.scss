@@ -1,8 +1,8 @@
 @use '/src/assets/global';
 .HowItWork {
     @include global.paddingInline;
-    padding-right: 0;
-    @apply w-full h-screen flex items-center gap-10;
+    // padding-right: 0;
+    @apply w-full  flex items-center gap-10 mb-4;
     .HowItWork-left {
         @apply h-4/5 py-4 flex flex-col;
         flex: 0.35;
@@ -12,15 +12,12 @@
             font-weight: 500;
             line-height: 40px;
             letter-spacing: 0em;
-            text-align: left;
         }
         .HowItWork-text {
             font-family: 'Open Sans';
             font-size: 14px;
             font-weight: 400;
             letter-spacing: 0em;
-            text-align: left;
-            width: 25vw;
             color: #4e4e4e;
         }
         .HowItWork-menus {
@@ -34,7 +31,6 @@
                 border-radius: 1.5rem;
                 .HowItWork-item-number {
                     font-family: Jost;
-                    font-size: 30px;
                     font-weight: 600;
 
                     letter-spacing: 0em;
@@ -62,25 +58,28 @@
     }
 
     .HowItWork-right {
-        @apply h-3/4 rounded-l-3xl flex flex-col justify-center gap-2;
-        padding-left: 5rem;
+        @apply rounded-l-3xl flex flex-col justify-center gap-2;
+        @apply pl-4 lg:pl-[5rem];
+        // padding-left: 5rem;
         background-image: url('/assets/images/HowItWork.png');
         background-repeat: no-repeat;
-        background-size: 35%;
+        // background-size: 35%;
         background-position: right bottom;
         flex: 0.65;
         background-color: #f6f6f6;
         h2 {
-            @apply w-3/5;
+            @apply w-full md:w-3/5;
             font-family: Jost;
-            font-size: 30px;
+            line-height: 2.3rem;
+            // font-size: 30px;
             font-weight: 600;
             letter-spacing: 0em;
             text-align: left;
         }
 
         p.HowItWork-right-text {
-            @apply w-3/5;
+            @apply w-full md:w-3/5;
+
             font-family: Open Sans;
             font-weight: 400;
             font-size: 14px;
@@ -93,8 +92,9 @@
         }
         .HowItWork-right-btn {
             @apply flex items-center gap-2 mt-4;
+            @apply flex-col mobile:flex-row;
             button {
-                @apply flex items-center gap-2 bg-black px-2 py-1 rounded-md;
+                @apply w-full mobile:w-auto flex justify-center mobile:justify-start items-center gap-2 bg-black px-2 py-1 rounded-md;
                 img {
                     @apply w-8;
                 }

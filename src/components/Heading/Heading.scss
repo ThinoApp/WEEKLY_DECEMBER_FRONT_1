@@ -1,19 +1,22 @@
 @use '/src/assets/global';
 
 .Heading {
-    @apply w-full h-screen pt-4 flex flex-col;
+    @apply w-full h-screen pt-4 flex flex-col relative;
     height: 120vh;
     @include global.paddingInline;
-    background-image: url('/assets/images/bgHeading.png');
+    // background-image: url('/assets/images/bgHeading.png');
     background-size: cover;
+
+    .bg-heading {
+        @apply absolute top-0 left-0 object-cover;
+    }
     .Heading-content {
         @apply flex flex-col my-auto gap-6;
     }
     .Heading-title {
         font-family: Jost;
-        font-size: 44px;
+        // font-size: 44px;
         font-weight: 600;
-        line-height: 3.5rem;
         letter-spacing: 0em;
         text-align: left;
     }
@@ -47,9 +50,9 @@
         }
     }
     hr {
-        @apply w-1/3;
+        @apply w-[23rem];
     }
     .Heading-star {
-        @apply w-1/3;
+        @apply w-[23rem];
     }
 }

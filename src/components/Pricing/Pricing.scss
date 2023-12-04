@@ -2,7 +2,7 @@
 
 .Pricing {
     @include global.paddingInline;
-    @apply w-full h-screen flex flex-col items-center my-16 gap-4;
+    @apply w-full h-fit lg:h-screen   flex flex-col items-center my-0 lg:my-16 gap-4;
     h2 {
         font-family: Jost;
         font-size: 30px;
@@ -12,16 +12,17 @@
         text-align: center;
     }
     & > p {
+        @apply w-full sm:w-[50vw];
         font-family: Open Sans;
         font-size: 15px;
         font-weight: 400;
         line-height: 24px;
         letter-spacing: 0em;
         text-align: center;
-        width: 50vw;
     }
     &-content {
-        @apply w-full h-2/4 flex items-start justify-around rounded-xl;
+        @apply w-full flex  justify-around rounded-xl;
+        @apply h-fit lg:h-2/4 flex-col md:flex-row items-center md:items-start gap-y-8;
         background: conic-gradient(
             from 180deg at 50% 50%,
             rgba(73, 222, 255, 0.72) 0deg,
@@ -30,6 +31,7 @@
         .Starter,
         .Professional {
             @apply w-2/6 flex flex-col relative top-24 gap-2;
+            @apply w-5/6 md:w-2/6;
             h3 {
                 @apply flex items-center gap-2;
                 font-family: Jost;
@@ -44,7 +46,7 @@
             }
 
             .liste {
-                @apply rounded-2xl w-full h-fit bg-white flex flex-col items-start px-12 py-8 gap-4;
+                @apply rounded-2xl w-full h-fit bg-white flex flex-col items-start px-6 sm:px-12 py-8 gap-4;
                 box-shadow: 0px 28px 57px 0px #bebebe40;
 
                 h2 {
@@ -61,7 +63,7 @@
                 ul {
                     @apply flex flex-col items-start gap-4;
                     li {
-                        @apply flex items-center gap-2;
+                        @apply flex flex-wrap items-center gap-2;
                         font-family: Open Sans;
                         font-size: 14px;
                         font-weight: 300;

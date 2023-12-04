@@ -2,7 +2,7 @@
 .ClientLogos {
     @include global.paddingInline;
 
-    @apply flex flex-col items-center gap-4;
+    @apply flex flex-col items-center gap-4 mt-8;
     &-title {
         @apply w-full;
         font-family: Jost;
@@ -29,6 +29,9 @@
             border: 1px solid #c5c5c5;
             border-top: none;
             border-left: none;
+            &.teste {
+                background-color: blue;
+            }
             &.endRow {
                 border-bottom: none;
             }
@@ -45,5 +48,12 @@
                 object-fit: cover;
             }
         }
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .logo-container {
+        border: none !important;
+        border-bottom: 1px solid #c5c5c5 !important;
     }
 }

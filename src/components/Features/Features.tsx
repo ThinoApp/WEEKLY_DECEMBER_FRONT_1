@@ -1,4 +1,5 @@
 import './Features.scss';
+import { motion } from 'framer-motion';
 
 const subContent = [
     {
@@ -22,21 +23,39 @@ const subContent = [
 ];
 const Features = () => {
     return (
-        <div className="Features">
-            <h2 className="Features-title">Explore Premium Features</h2>
-            <p className="Features-text">
+        <div className="Features" id="Features">
+            <motion.h2 initial={{ y: 100, opacity: 0 }} whileInView={{ y: 0, opacity: 1 }} className="Features-title">
+                Explore Premium Features
+            </motion.h2>
+            <motion.p
+                className="Features-text"
+                initial={{ y: 100, opacity: 0 }}
+                whileInView={{ y: 0, opacity: 1 }}
+                transition={{ delay: 0.3, type: 'tween', duration: 0.8 }}
+            >
                 Unique and powerful suite of software to run your entire business, brought to you by a company with the
                 long term vision to transform the way you work.
-            </p>
-            <div className="Features-sub-content">
-                {subContent.map((item) => (
-                    <div className="Features-sub-content-item" key={item.id}>
+            </motion.p>
+            <motion.div
+                initial={{ y: 100, opacity: 0 }}
+                whileInView={{ y: 0, opacity: 1 }}
+                transition={{ delay: 0.7, type: 'tween', duration: 0.2 }}
+                className="Features-sub-content flex-col md:flex-row"
+            >
+                {subContent.map((item, index) => (
+                    <motion.div
+                        initial={{ y: 100, opacity: 0 }}
+                        whileInView={{ y: 0, opacity: 1 }}
+                        transition={{ delay: index * 0.7, type: 'tween' }}
+                        className="Features-sub-content-item"
+                        key={item.id}
+                    >
                         <img src={item.icon} className="Features-icon" alt="icon" />
                         <h3>{item.title}</h3>
                         <p>{item.text}</p>
-                    </div>
+                    </motion.div>
                 ))}
-            </div>
+            </motion.div>
         </div>
     );
 };

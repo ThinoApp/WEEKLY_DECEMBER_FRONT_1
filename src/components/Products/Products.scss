@@ -1,7 +1,7 @@
 @use '/src/assets/global';
 .Products {
     @include global.paddingInline;
-    @apply w-full h-screen flex flex-col items-center mt-12;
+    @apply w-full flex flex-col items-center mt-12;
     h2 {
         font-family: Jost;
         font-size: 30px;
@@ -12,12 +12,10 @@
     }
     & > p {
         font-family: Open Sans;
-        font-size: 15px;
         font-weight: 400;
         line-height: 24px;
         letter-spacing: 0em;
         text-align: center;
-        width: 50vw;
         text-transform: capitalize;
     }
     &-content {

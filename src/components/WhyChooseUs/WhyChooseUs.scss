@@ -2,25 +2,29 @@
 
 .WhyChooseUs {
     @include global.paddingInline;
-    @apply flex items-start  justify-between gap-8 w-screen h-screen  relative pt-20 mt-28;
+    @apply flex items-start  justify-between gap-8 w-screen relative pt-20 mt-28;
 
     &::before {
         @apply w-full h-full absolute left-0 top-0 -scale-x-100;
         content: '';
         display: block;
-        background-image: url('/assets/images/bgCoreFeature.png');
+        // background-image: url('/assets/images/bgCoreFeature.png');
         background-repeat: no-repeat;
         background-size: 40% 100%;
         z-index: -1;
     }
 
+    .bg-whychoose-us {
+        @apply w-[40%] object-cover absolute right-0 top-0 -scale-x-100;
+        z-index: -1;
+    }
     & > img {
         @apply object-cover;
-        width: 45%;
+        // width: 45%;
     }
 
     &-content {
-        @apply w-1/2 flex flex-col items-start gap-4;
+        @apply flex flex-col items-start gap-4;
         h2 {
             @apply w-full;
 
@@ -49,7 +53,7 @@
                         @apply w-1/6;
                     }
                 }
-                @apply flex flex-col items-start h-[110px] justify-between;
+                @apply flex flex-col  h-[110px] justify-between;
                 flex: 1;
                 img {
                     @apply w-[27%] object-cover;
@@ -79,7 +83,6 @@
         button {
             @apply flex items-center justify-center bg-primary03 text-white mt-4;
 
-            width: 150px;
             height: 45px;
             padding: 7px, 39px, 7px, 39px;
             border-radius: 5px;

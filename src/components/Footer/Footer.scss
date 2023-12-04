@@ -2,12 +2,16 @@
 
 .Footer {
     @include global.paddingInline;
-    @apply w-full h-[60vh] flex flex-col items-start justify-end gap-4 relative top-60 bg-primary03;
+    @apply w-full h-fit md:h-[60vh] flex flex-col items-start justify-end gap-4 relative bg-primary03;
+    @apply mt-40 lg:mt-64 py-4;
+    // @apply top-[10rem] sm:top-[15rem];
 
     .Footer-top {
         @apply w-full flex items-center justify-between;
+        @apply flex-col sm:flex-row items-start sm:items-center gap-y-2;
         .Footer-logo {
             @apply flex items-center gap-2;
+            @apply mb-4;
             img {
                 width: 30px;
                 height: 30px;
@@ -23,7 +27,7 @@
             }
         }
         .Footer-menu {
-            @apply flex items-center gap-8 ml-auto;
+            @apply flex items-center gap-8 ml-0 sm:ml-auto;
             li {
                 cursor: pointer;
                 img {
@@ -35,7 +39,8 @@
     }
 
     .Footer-middle {
-        @apply w-full flex items-start justify-between py-2;
+        @apply w-full  flex-wrap items-start justify-between py-2;
+        @apply grid grid-cols-2 grid-flow-row gap-y-8 sm:flex;
         border-top: 0.5px solid rgba($color: #ffffff, $alpha: 0.1);
         .Footer-menu-container {
             @apply flex flex-col gap-2;
@@ -83,7 +88,7 @@
                     content: '';
                 }
                 img {
-                    @apply h-full rounded-2xl absolute top-4 left-0;
+                    @apply h-full rounded-2xl absolute top-4 left-0 object-cover;
                 }
                 button {
                     z-index: 10;

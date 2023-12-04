@@ -1,16 +1,20 @@
 @use '/src/assets/global';
 .CoreFeatures {
     @include global.paddingInline;
-    @apply flex items-start  justify-between gap-8 w-screen h-screen  pt-20 mt-28;
-    background-image: url('/assets/images/bgCoreFeature.png');
+    @apply flex  justify-between gap-8 w-screen pt-20 mt-28 relative;
+    // background-image: url('/assets/images/bgCoreFeature.png');
     background-repeat: no-repeat;
     background-size: 40% 100%;
+    .bg-core-feature {
+        @apply w-[40%] absolute left-0 object-cover;
+        z-index: -1;
+    }
     & > img {
         @apply object-cover;
-        width: 45%;
+        // width: 45%;
     }
     &-content {
-        @apply w-1/2 flex flex-col items-start gap-4;
+        @apply flex flex-col items-start gap-4;
         h2 {
             @apply w-full;
 

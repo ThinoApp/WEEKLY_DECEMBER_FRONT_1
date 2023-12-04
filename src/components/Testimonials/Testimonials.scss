@@ -1,7 +1,8 @@
 @use '/src/assets/global';
 .Testimonials {
     @include global.paddingInline;
-    @apply w-full h-[80vh] bg-primary03  flex flex-col items-center relative;
+
+    @apply w-full h-fit py-4 sm:h-[80vh] bg-primary03  flex flex-col items-center relative;
     img[alt='pattern'] {
         @apply object-cover w-4/5 absolute left-1/2 -translate-x-1/2;
     }
@@ -82,14 +83,15 @@
         }
     }
     .Testimonials-bottom {
-        @apply w-full flex items-center justify-around mb-auto;
+        @apply w-full flex flex-wrap items-center justify-around mb-auto;
         p {
+            @apply text-sm sm:text-[16px];
             color: white;
             text-align: center;
         }
         h4 {
+            @apply text-lg sm:text-[26px];
             font-family: Jost;
-            font-size: 26px;
             font-weight: 500;
             letter-spacing: 0em;
             text-align: center;

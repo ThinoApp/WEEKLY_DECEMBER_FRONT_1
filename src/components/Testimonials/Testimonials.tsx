@@ -1,9 +1,18 @@
 import './Testimonials.scss';
 import { MdStar } from 'react-icons/md';
 import { FiChevronLeft, FiChevronRight } from 'react-icons/fi';
+import { motion } from 'framer-motion';
+
 const Testimonials = () => {
     return (
-        <div className="Testimonials">
+        <motion.div
+            initial={{ scaleX: 0, opacity: 0 }}
+            whileInView={{ scaleX: 1, opacity: 1 }}
+            transition={{
+                delay: 0.2,
+            }}
+            className="Testimonials"
+        >
             <div className="Testimonials-arrow-btn">
                 <div className="left">
                     <FiChevronLeft className="icon" size={24} />
@@ -58,7 +67,7 @@ const Testimonials = () => {
                     <p>Current Users</p>
                 </div>
             </div>
-        </div>
+        </motion.div>
     );
 };
 export default Testimonials;

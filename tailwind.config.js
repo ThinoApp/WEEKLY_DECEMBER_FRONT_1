@@ -3,6 +3,11 @@ export default {
     content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
     theme: {
         extend: {
+            screens: {
+                mobile: '470px',
+                xsmobile: '370px',
+                xslarge: '900px',
+            },
             //Background
             backgroundColor: {
                 primary01: '#49DEFF',

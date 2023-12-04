@@ -1,4 +1,5 @@
 import './ClientLogos.scss';
+import { motion } from 'framer-motion';
 const ClientLogos = () => {
     return (
         <div className="ClientLogos">
@@ -9,8 +10,14 @@ const ClientLogos = () => {
             </p>
             <div className="ClientLogos-content">
                 {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13].map((item) => (
-                    <div className={`logo-container ${item > 10 ? 'endRow' : ''}`}>
-                        <img src={`/WEEKLY_DECEMBER_FRONT_1/assets/images/clientLogos/Logo_${item}.png`} alt="icons" />
+                    <div className={`logo-container ${item > 10 ? 'endRow' : ''}  sm:border-none`}>
+                        <motion.img
+                            initial={{ x: -100, opacity: 0 }}
+                            whileInView={{ x: 0, opacity: 1 }}
+                            transition={{ delay: 0.1 * item }}
+                            src={`/WEEKLY_DECEMBER_FRONT_1/assets/images/clientLogos/Logo_${item}.png`}
+                            alt="icons"
+                        />
                     </div>
                 ))}
             </div>
