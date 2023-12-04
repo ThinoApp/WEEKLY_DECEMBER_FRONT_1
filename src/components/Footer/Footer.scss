@@ -1,1 +1,114 @@
-.Footer { }
+@use '/src/assets/global';
+
+.Footer {
+    @include global.paddingInline;
+    @apply w-full h-[60vh] flex flex-col items-start justify-end gap-4 relative top-60 bg-primary03;
+
+    .Footer-top {
+        @apply w-full flex items-center justify-between;
+        .Footer-logo {
+            @apply flex items-center gap-2;
+            img {
+                width: 30px;
+                height: 30px;
+            }
+            h2 {
+                @apply text-white;
+                font-family: 'Jost';
+                font-size: 26px;
+                font-weight: 700;
+                line-height: 52px;
+                letter-spacing: 0em;
+                text-align: left;
+            }
+        }
+        .Footer-menu {
+            @apply flex items-center gap-8 ml-auto;
+            li {
+                cursor: pointer;
+                img {
+                    width: 24px;
+                    object-fit: cover;
+                }
+            }
+        }
+    }
+
+    .Footer-middle {
+        @apply w-full flex items-start justify-between py-2;
+        border-top: 0.5px solid rgba($color: #ffffff, $alpha: 0.1);
+        .Footer-menu-container {
+            @apply flex flex-col gap-2;
+            flex: 1;
+            &:nth-last-of-type(1) {
+                flex: 1.7;
+            }
+            .Footer-title {
+                @apply text-white flex items-center justify-between;
+                font-family: Jost;
+                font-size: 18px;
+                font-weight: 500;
+                line-height: 33px;
+                letter-spacing: 0em;
+                text-align: left;
+                span {
+                    @apply rounded-full flex items-center justify-center;
+                    border: 0.5px solid rgba($color: #ffffff, $alpha: 0.3);
+                    width: 27px;
+                    height: 27px;
+                }
+            }
+
+            .Footer-list {
+                @apply flex flex-col items-start gap-1 pt-4;
+                border-top: 0.5px solid rgba($color: #ffffff, $alpha: 0.1);
+
+                li {
+                    @apply text-white;
+                    font-family: Jost;
+                    font-size: 14px;
+                    font-weight: 400;
+                    line-height: 29px;
+                    letter-spacing: 0em;
+                    text-align: left;
+                }
+            }
+
+            .read-now-container {
+                @apply h-[23vh] pl-4 pt-4 relative flex items-center justify-center;
+                border-top: 0.5px solid rgba($color: #ffffff, $alpha: 0.1);
+                &::after {
+                    @apply w-full h-full absolute top-0 left-0 rounded-2xl;
+                    background: rgba($color: #000000, $alpha: 0.07);
+                    content: '';
+                }
+                img {
+                    @apply h-full rounded-2xl absolute top-4 left-0;
+                }
+                button {
+                    z-index: 10;
+                    padding: 0.3rem 2rem;
+                    position: relative;
+                    background: #ffffffbf;
+                    font-family: Jost;
+                    font-size: 14px;
+                    font-weight: 600;
+                    line-height: 32px;
+                    letter-spacing: 0em;
+                    text-align: center;
+                }
+            }
+        }
+    }
+
+    .Footer-copyright {
+        @apply text-white w-full py-4;
+        border-top: 0.5px solid rgba($color: #ffffff, $alpha: 0.1);
+        font-family: Jost;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 32px;
+        letter-spacing: 0em;
+        text-align: center;
+    }
+}

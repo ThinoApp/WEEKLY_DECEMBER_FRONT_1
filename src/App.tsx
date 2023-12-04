@@ -2,7 +2,7 @@ import './App.scss';
 import ClientLogos from './components/ClientLogos/ClientLogos';
 import CoreFeatures from './components/CoreFeatures/CoreFeatures';
 import Features from './components/Features/Features';
-// import Footer from './components/Footer/Footer';
+import Footer from './components/Footer/Footer';
 import Heading from './components/Heading/Heading';
 import HowItWork from './components/HowItWork/HowItWork';
 import NewsLetter from './components/NewsLetter/NewsLetter';
@@ -24,7 +24,7 @@ function App() {
             <HowItWork />
             <Testimonials />
             <Pricing />
-            {/* <Footer /> */}
+            <Footer />
         </div>
     );
 }
