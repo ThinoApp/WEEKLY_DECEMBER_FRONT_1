@@ -7,7 +7,7 @@ const CoreFeatures = () => {
                 initial={{ x: -100, y: 100, opacity: 0 }}
                 whileInView={{ x: 0, y: 0, opacity: 1 }}
                 transition={{ delay: 0.7, type: 'tween', duration: 0.2 }}
-                src="/assets/images/bgCoreFeature.png"
+                src="/WEEKLY_DECEMBER_FRONT_1/assets/images/bgCoreFeature.png"
                 alt="bg-core-feature"
                 className="bg-core-feature"
             />
